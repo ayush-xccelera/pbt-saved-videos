@@ -32,7 +32,7 @@ export const AGE_CATEGORIES: AgeCategory[] = ["Sub Junior", "Junior", "Senior", 
 export const DIFFICULTY_LEVELS: DifficultyLevel[] = ["Foundation", "Medium", "Difficult"];
 
 // The first four entries in each list match the Figma design exactly.
-// A couple of extra "Advanced" / "Adult" entries are included so the
+// Additional saved videos keep every carousel at eight cards and ensure the
 // category filters have something to show for every pill.
 export const tutorials: TutorialVideo[] = [
   { id: "t1", title: "Feet & Leg Combination", category: "Senior", focus: "Feet & Allegro", difficulty: "Difficult", image: tutorial1 },
@@ -41,6 +41,8 @@ export const tutorials: TutorialVideo[] = [
   { id: "t4", title: "Feet & Leg Combination", category: "Senior", focus: "Feet & Allegro", difficulty: "Foundation", image: tutorial4 },
   { id: "t5", title: "Advanced Petit Allegro", category: "Advanced", focus: "Feet & Allegro", difficulty: "Difficult", image: tutorial1 },
   { id: "t6", title: "Adult Barre Warm Up", category: "Adult", focus: "Barre Basics", difficulty: "Foundation", image: tutorial2 },
+  { id: "t7", title: "Frog Legs", category: "Junior", focus: "Feet & Allegro", difficulty: "Medium", image: tutorial2 },
+  { id: "t8", title: "Jeté & Jeté Battu", category: "Sub Junior", focus: "Feet & Allegro", difficulty: "Foundation", image: tutorial3 },
 ];
 
 export const classes: ClassVideo[] = [
@@ -50,4 +52,6 @@ export const classes: ClassVideo[] = [
   { id: "c4", title: "Class 4", exercises: 10, category: "Junior", focus: "Warm Up Class", image: class4 },
   { id: "c5", title: "Class 5", exercises: 12, category: "Advanced", focus: "Full Class", image: class1 },
   { id: "c6", title: "Class 6", exercises: 8, category: "Adult", focus: "Warm up Class", image: class2 },
+  { id: "c7", title: "Class 2", exercises: 10, category: "Junior", focus: "Full Class", image: class2 },
+  { id: "c8", title: "Class 3", exercises: 10, category: "Sub Junior", focus: "Warm up Class", image: class3 },
 ];
