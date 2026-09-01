@@ -7,3 +7,9 @@ dist-ssr
 screenshot*.png
 crop-*.png
 verify-screenshot.png
+node_modules/
+dist/
+build/
+.expo/
+*.log
+android/
