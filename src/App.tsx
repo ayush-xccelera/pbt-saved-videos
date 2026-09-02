@@ -50,6 +50,7 @@ function SavedVideosPage() {
 
           <Section
             title="Tutorials"
+            viewAllHref="https://pbt.dance/en/training-portal/pbt/tutorials/pbt-sub-junior"
             emptyMessage="No tutorials match your filters yet."
             items={filteredTutorials.map((item) => ({
               id: item.id,
@@ -62,6 +63,7 @@ function SavedVideosPage() {
 
           <Section
             title="Classes"
+            viewAllHref="https://pbt.dance/en/training-portal/pbt/classes/pbt-sub-junior"
             emptyMessage="No classes match your filters yet."
             items={filteredClasses.map((item) => ({
               id: item.id,

@@ -5,7 +5,11 @@ import dropdownArrow from "../assets/icons/dropdown-arrow-small.svg";
 import avatar from "../assets/images/avatar.png";
 import { useSnackbar } from "../context/SnackbarContext";
 
-const NAV_LINKS = ["Discover PBT Online", "PBT Workshops", "Shop"];
+const NAV_LINKS = [
+  { label: "Discover PBT Online", href: "https://pbt.dance/en/online-training" },
+  { label: "PBT Workshops", href: "https://pbt.dance/en/workshops/pbt" },
+  { label: "Shop", href: "https://pbtstore.com/" },
+];
 
 export default function TopNav() {
   const { notify } = useSnackbar();
@@ -25,15 +29,14 @@ export default function TopNav() {
           Training Portal
           <img src={dropdownArrow} alt="" className="h-[5px] w-[10px]" />
         </button>
-        {NAV_LINKS.map((label) => (
-          <button
+        {NAV_LINKS.map(({ label, href }) => (
+          <a
             key={label}
-            type="button"
-            onClick={() => notify()}
+            href={href}
             className="text-sm font-semibold text-white transition hover:text-white/80"
           >
             {label}
-          </button>
+          </a>
         ))}
       </nav>
 

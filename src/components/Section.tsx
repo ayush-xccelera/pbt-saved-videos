@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import nextArrow from "../assets/icons/next-arrow-circle.svg";
-import { useSnackbar } from "../context/SnackbarContext";
 import VideoCard from "./VideoCard";
 import type { DifficultyLevel } from "../data/videos";
 
@@ -16,10 +15,10 @@ interface SectionProps {
   title: string;
   items: SectionItem[];
   emptyMessage: string;
+  viewAllHref: string;
 }
 
-export default function Section({ title, items, emptyMessage }: SectionProps) {
-  const { notify } = useSnackbar();
+export default function Section({ title, items, emptyMessage, viewAllHref }: SectionProps) {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [canSlideForward, setCanSlideForward] = useState(false);
 
@@ -51,13 +50,12 @@ export default function Section({ title, items, emptyMessage }: SectionProps) {
     <section className="flex flex-col gap-5">
       <div className="flex items-end justify-between">
         <h2 className="font-izmir text-[28px] font-bold text-pbt-pink sm:text-[32px]">{title}</h2>
-        <button
-          type="button"
-          onClick={() => notify()}
+        <a
+          href={viewAllHref}
           className="text-[16px] font-normal text-pbt-pink underline underline-offset-2 transition hover:text-pbt-pink/80"
         >
           View All
-        </button>
+        </a>
       </div>
 
       {items.length === 0 ? (
